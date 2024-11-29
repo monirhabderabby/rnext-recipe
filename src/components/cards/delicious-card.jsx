@@ -7,17 +7,17 @@ const DeliciousCard = ({ img, name, time, rating = 0 }) => {
       <img
         src={img}
         alt={name}
-        class="w-full h-[300px] object-cover rounded-lg mb-4"
+        className="w-full h-[300px] object-cover rounded-lg mb-4"
       />
-      <h3 class="text-xl font-semibold mb-2">{name}</h3>
-      <div class="flex items-center text-yellow-500 mb-2">
+      <h3 className="text-xl font-semibold mb-2">{name}</h3>
+      <div className="flex items-center text-yellow-500 mb-2">
         {Array(fullStars)
           .fill(null)
           .map((_, index) => (
             <span key={index}>{icons.star}</span>
           ))}
       </div>
-      <p class="text-gray-600">{time}</p>
+      <p className="text-gray-600">{time}</p>
     </div>
   );
 };

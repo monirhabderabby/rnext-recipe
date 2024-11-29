@@ -83,27 +83,27 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer class="bg-gray-100 py-8">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-8">
+    <footer className="bg-gray-100 py-8">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <Link href="/" class="text-3xl font-bold">
-              <img src="/lws-kitchen.png" class="h-10" />
+            <Link href="/" className="text-3xl font-bold">
+              <img src="/lws-kitchen.png" className="h-10" />
             </Link>
-            <p class="text-gray-600 mt-2 text-sm">
+            <p className="text-gray-600 mt-2 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
           {links.map(({ id, name, subLinks }) => (
             <div key={id}>
-              <h4 class="font-semibold mb-4">{name}</h4>
-              <ul class="space-y-2">
+              <h4 className="font-semibold mb-4">{name}</h4>
+              <ul className="space-y-2">
                 {subLinks.map(({ id, href, label }) => (
                   <li key={id}>
                     <Link
                       href={href}
-                      class="text-gray-600 hover:text-orange-500"
+                      className="text-gray-600 hover:text-orange-500"
                     >
                       {label}
                     </Link>

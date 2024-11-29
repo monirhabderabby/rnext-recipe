@@ -5,9 +5,9 @@ const SuperDelicious = () => {
   const data = getDeliciousRecipes();
 
   return (
-    <section class="mb-16" id="super_delicious">
-      <h2 class="text-3xl font-bold mb-8">Super Delicious</h2>
-      <div class="grid md:grid-cols-3 gap-8">
+    <section className="mb-16" id="super_delicious">
+      <h2 className="text-3xl font-bold mb-8">Super Delicious</h2>
+      <div className="grid md:grid-cols-3 gap-8">
         {data?.map((item) => (
           <DeliciousCard
             key={item?.title}

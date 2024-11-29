@@ -4,10 +4,10 @@ const LatestRecipeCard = ({ img, name, category }) => {
       <img
         src={img}
         alt={name}
-        class="w-full h-[300px] object-cover rounded-lg mb-4"
+        className="w-full h-[300px] object-cover rounded-lg mb-4"
       />
-      <h3 class="text-lg font-semibold mb-2">{name}</h3>
-      <p class="text-gray-600">{category}</p>
+      <h3 className="text-lg font-semibold mb-2">{name}</h3>
+      <p className="text-gray-600">{category}</p>
     </div>
   );
 };
