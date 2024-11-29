@@ -1,3 +1,4 @@
+import Footer from "@/components/shared/footer";
 import Navbar from "@/components/shared/navbar";
 import "./globals.css";
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`bg-white antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
