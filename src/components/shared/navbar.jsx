@@ -16,7 +16,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="categories" class="hover:text-orange-500">
+            <Link href="/categories" class="hover:text-orange-500">
               Categories
             </Link>
           </li>

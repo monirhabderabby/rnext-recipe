@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CategoryCard from "../cards/category-card";
 
 const PopulerCategories = () => {
@@ -5,9 +6,9 @@ const PopulerCategories = () => {
     <section class="mb-16">
       <div class="flex justify-between items-top">
         <h2 class="text-3xl font-bold mb-8">Popular Categories</h2>
-        <a href="./category.html" class="text-orange-500">
+        <Link href="/categories" class="text-orange-500">
           View All
-        </a>
+        </Link>
       </div>
       <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
         <CategoryCard
