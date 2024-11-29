@@ -1,9 +1,9 @@
-import { getCategories } from "@/lib/lib";
+import { getPopulerCategories } from "@/lib/lib";
 import Link from "next/link";
 import CategoryCard from "../cards/category-card";
 
 const PopulerCategories = () => {
-  const data = getCategories();
+  const data = getPopulerCategories();
 
   const trimData = data?.slice(0, 6);
   return (
