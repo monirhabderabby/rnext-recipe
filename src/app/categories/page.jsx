@@ -1,4 +1,5 @@
 import { getCategories } from "@/lib/lib";
+import Link from "next/link";
 
 const Categories = () => {
   const data = getCategories();
@@ -8,7 +9,7 @@ const Categories = () => {
 
       <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
         {data?.map(({ id, image, name }) => (
-          <CategoryCard img={image} name={name} key={id} />
+          <CategoryCard img={image} name={name} key={id} categoryId={id} />
         ))}
       </div>
     </main>
@@ -17,9 +18,9 @@ const Categories = () => {
 
 export default Categories;
 
-const CategoryCard = ({ img, name }) => {
+const CategoryCard = ({ img, name, categoryId }) => {
   return (
-    <div className="text-center">
+    <Link href={`/recipes/${categoryId}`} className="text-center">
       <div className="overflow-hidden rounded-full mb-4 relative cursor-pointer">
         <img
           src={img}
@@ -28,6 +29,6 @@ const CategoryCard = ({ img, name }) => {
         />
       </div>
       <h2 className="text-xl font-semibold">{name}</h2>
-    </div>
+    </Link>
   );
 };

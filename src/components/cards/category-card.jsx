@@ -1,6 +1,11 @@
-const CategoryCard = ({ img, name }) => {
+import Link from "next/link";
+
+const CategoryCard = ({ img, name, categoryId }) => {
   return (
-    <div className="cursor-pointer text-center group">
+    <Link
+      href={`/recipes/${categoryId}`}
+      className="cursor-pointer text-center group"
+    >
       <div className="overflow-hidden rounded-full mb-2 w-20 h-20 mx-auto">
         <img
           src={img}
@@ -11,7 +16,7 @@ const CategoryCard = ({ img, name }) => {
       <p className="transition-transform duration-300 group-hover:scale-105">
         {name}
       </p>
-    </div>
+    </Link>
   );
 };
 

@@ -16,7 +16,7 @@ const PopulerCategories = () => {
       </div>
       <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
         {trimData?.map(({ id, image, name }) => (
-          <CategoryCard key={id} img={image} name={name} />
+          <CategoryCard key={id} img={image} name={name} categoryId={id} />
         ))}
       </div>
     </section>

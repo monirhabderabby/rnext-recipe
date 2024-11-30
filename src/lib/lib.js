@@ -63,3 +63,7 @@ export const getYouMayLikeData = (category, currentRecipeTitle) => {
 
   return data;
 };
+
+export const getRecipesByCategoryId = (categoryId) => {
+  return recipeData?.filter((item) => item.category_id === categoryId);
+};
