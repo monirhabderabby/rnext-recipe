@@ -8,8 +8,9 @@ const YouMightAlsoLike = ({ category, recipeName }) => {
 
   if (data.length === 0) {
     content = (
-      <div className="w-full h-[200px] flex items-center justify-start">
-        No Data Found!
+      <div className="w-full h-[100px] flex items-start justify-start max-w-[500px] text-gray-500">
+        Currently, there are no suggestions available for you. Please check back
+        later or explore other options!
       </div>
     );
   } else if (data.length > 0) {
