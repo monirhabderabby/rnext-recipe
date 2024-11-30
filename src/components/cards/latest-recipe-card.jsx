@@ -1,6 +1,8 @@
-const LatestRecipeCard = ({ img, name, category }) => {
+import Link from "next/link";
+
+const LatestRecipeCard = ({ img, name, category, categoryId }) => {
   return (
-    <div>
+    <Link href={`/${categoryId}/${name}`}>
       <img
         src={img}
         alt={name}
@@ -8,7 +10,7 @@ const LatestRecipeCard = ({ img, name, category }) => {
       />
       <h3 className="text-lg font-semibold mb-2">{name}</h3>
       <p className="text-gray-600">{category}</p>
-    </div>
+    </Link>
   );
 };
 

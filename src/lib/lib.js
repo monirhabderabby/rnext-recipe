@@ -49,3 +49,17 @@ export const getLatestRecipes = () => {
 export const getCategoryById = (categoryId) => {
   return categoriesData.find((item) => item.id === categoryId);
 };
+
+export const getSingleRecipe = (categoryId, recipeName) => {
+  return recipeData?.find(
+    (item) => item.category_id === categoryId && item.title === recipeName
+  );
+};
+
+export const getYouMayLikeData = (category, currentRecipeTitle) => {
+  const data = recipeData?.filter(
+    (item) => item.category_id === category && item.title !== currentRecipeTitle
+  );
+
+  return data;
+};

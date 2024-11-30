@@ -15,6 +15,7 @@ const LatestRecipe = () => {
               img={`/thumbs/${item?.thumbnail}`}
               name={item?.title}
               category={category?.name}
+              categoryId={item?.category_id}
             />
           );
         })}

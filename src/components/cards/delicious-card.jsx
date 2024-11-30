@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { icons } from "../ui/icons";
 
-const DeliciousCard = ({ img, name, time, rating = 0 }) => {
+const DeliciousCard = ({ img, name, time, rating = 0, categoryId }) => {
   const fullStars = Math.floor(rating);
   return (
-    <div>
+    <Link href={`/${categoryId}/${name}`}>
       <img
         src={img}
         alt={name}
@@ -18,7 +19,7 @@ const DeliciousCard = ({ img, name, time, rating = 0 }) => {
           ))}
       </div>
       <p className="text-gray-600">{time}</p>
-    </div>
+    </Link>
   );
 };
 

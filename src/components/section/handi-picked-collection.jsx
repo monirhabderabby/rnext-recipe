@@ -11,9 +11,10 @@ const HandiPickedCollection = () => {
       <div className="grid md:grid-cols-2 gap-8">
         {data?.map((item) => (
           <HandiPickedCollectionCard
-            key={item.title}
+            key={item?.title}
             name={item?.title}
             img={`/thumbs/${item.thumbnail}`}
+            category={item.category_id}
           />
         ))}
       </div>

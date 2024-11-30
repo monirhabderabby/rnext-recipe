@@ -15,6 +15,7 @@ const SuperDelicious = () => {
             name={item?.title}
             time={item?.cooking_time}
             rating={item?.rating?.average_rating}
+            categoryId={item?.category_id}
           />
         ))}
       </div>
